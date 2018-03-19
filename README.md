@@ -1,5 +1,4 @@
 # symfony_learning_twig
-# symfony_learning_twig
 
 symfony learning twig template through knpuniversity.com
 

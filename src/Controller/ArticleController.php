@@ -1,9 +1,12 @@
 <?php
 namespace App\Controller;
+use Psr\Log\LoggerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Twig\Environment;
+
 class ArticleController extends AbstractController
 {
     /**
@@ -33,8 +36,10 @@ class ArticleController extends AbstractController
     /**
      * @Route("/news/{slug}/star", name="article_toggle_star", methods={"POST"})
      */
-    public function toggleArticleStar($slug)
+    public function toggleArticleStar($slug, LoggerInterface $logger)
     {
+        $logger->info('this is been rating');
         return new JsonResponse(['stars' => rand(5, 100)]);
+
     }
 }
