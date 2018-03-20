@@ -10,22 +10,22 @@ use Twig\Environment;
 class ArticleController extends AbstractController
 {
     /**
-     * @Route("/")
+     * @Route("/", name="app_homepage")
      */
     public function homepage()
     {
-        return new Response('OMG! My first page already! WOOO!');
+        return $this->render('article/homepage.html.twig');
     }
     /**
-     * @Route("/news/{slug}")
+     * @Route("/news/{slug}", name="article_show")
      */
     public function show($slug)
     {
         //dump($slug, $this);
         $comments = [
-            'I ate a normal rock once. It did NOT taste like bacon!',
-            'Woohoo! I\'m going on an all-asteroid diet!',
-            'I like bacon too! Buy some from my site! bakinsomebacon.com',
+            'tess hsu' => 'I ate a normal rock once. It did NOT taste like bacon!',
+            'Stephan' => 'Woohoo! I\'m going on an all-asteroid diet!',
+            'Alexandre Frank' => 'I like bacon too! Buy some from my site! bakinsomebacon.com',
         ];
         return $this->render('article/show.html.twig', [
             'title' => ucwords(str_replace('-', ' ', $slug)),
