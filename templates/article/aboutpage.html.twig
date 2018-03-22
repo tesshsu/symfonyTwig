@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <!-- Three columns of text below the carousel -->
+            <div class="col-sm-12">
+                <section class="jumbotron text-center">
+                    <div class="container">
+                        <h1 class="jumbotron-heading">About Burger page example</h1>
+                        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+                        <p>
+                            <a href="#" class="btn btn-primary my-2">Main call to action</a>
+                            <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+                        </p>
+                    </div>
+                </section>
+            </div>
+            <div class="row">
+                {% for key, heading in headings %}
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="{{ asset('images/asteroid.jpeg') }}" alt="Generic placeholder image" width="140" height="140">
+                    <h2>{{ key }}</h2>
+                    <p>{{ heading }}</p>
+                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+                {% endfor %}
+            </div><!-- /.row -->
+        </div>
+    </div>
+{% endblock %}

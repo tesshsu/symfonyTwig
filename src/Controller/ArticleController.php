@@ -38,7 +38,7 @@ class ArticleController extends AbstractController
      */
     public function toggleArticleStar($slug, LoggerInterface $logger)
     {
-        $logger->notice('so show the loggerInterface');
+        $logger->info('this is been rating');
         return new JsonResponse(['stars' => rand(5, 100)]);
     }
 }
