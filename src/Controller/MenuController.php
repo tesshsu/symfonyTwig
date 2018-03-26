@@ -20,4 +20,12 @@ class MenuController extends AbstractController
             'headings' => $headings,
         ));
     }
+
+    /**
+     * @Route("/contact", name="app_contactpage")
+     */
+    public function contactpage()
+    {
+        return $this->render('article/contactpage.html.twig');
+    }
 }
