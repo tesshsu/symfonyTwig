@@ -23,6 +23,12 @@
     "doctrine/lexer": {
         "version": "v1.0.1"
     },
+    "knplabs/knp-markdown-bundle": {
+        "version": "1.7.0"
+    },
+    "michelf/php-markdown": {
+        "version": "1.8.0"
+    },
     "monolog/monolog": {
         "version": "1.23.0"
     },
