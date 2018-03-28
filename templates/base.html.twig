@@ -38,8 +38,8 @@
                     <img class="nav-profile-img rounded-circle" src="{{ asset('images/burger.png') }}">
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Account</a>
-                    <a class="dropdown-item" href="#">Create account</a>
+                    <a class="dropdown-item" href="{{ path('welcome') }}">Account</a>
+                    <a class="dropdown-item" href="{{ path('register') }}">Create account</a>
                     <a class="dropdown-item" href="#">Logout</a>
                 </div>
             </li>
